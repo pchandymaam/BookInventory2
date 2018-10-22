@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Book Inventory</string>
+
+    <!-- Label for overflow menu option that inserts fake book data into the app [CHAR LIMIT=20] -->
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+
+    <!-- Label for overflow menu option that deletes all book data in the app [CHAR LIMIT=20] -->
+    <string name="action_delete_all_entries">Delete All Books</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_overview">Overview</string>
+
+    <!-- Label for supplier info category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_supplier_info">Supplier Info</string>
+
+    <!-- Text hint for title field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_book_title">Title</string>
+
+    <!-- Text hint for price field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_book_price">Price</string>
+
+    <!-- Text hint for quantity field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_book_quantity">Quantity</string>
+
+    <!-- Text hint for supplier name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_supplier_name">Supplier Name</string>
+
+    <!-- Text hint for supplier phone field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_supplier_phone">Supplier Phone</string>
+
+    <!-- Label for editor menu option to save book and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+    <!-- Label for editor overflow menu option that deletes the current book [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+</resources>
