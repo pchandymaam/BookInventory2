@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_margin"
     tools:context=".EditorActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:text="@string/add_book"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
 
     <!-- Overview category -->
     <LinearLayout
@@ -16,37 +24,70 @@
 
         <!-- Label -->
         <TextView
-            android:text="@string/category_overview"
-            style="@style/CategoryStyle" />
+            style="@style/CategoryStyle"
+            android:text="@string/category_overview" />
 
         <!-- Input fields -->
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingLeft="4dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingStart="@dimen/view_padding"
+            android:paddingLeft="@dimen/view_padding"
+            android:paddingEnd="@dimen/view_padding"
+            android:paddingRight="@dimen/view_padding">
 
             <!-- Title field -->
             <EditText
                 android:id="@+id/edit_book_title"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/hint_book_title"
-                android:inputType="textCapWords"
-                style="@style/EditorFieldStyle" />
+                android:autofillHints="@string/hint_book_title"
+                android:inputType="textCapWords" />
 
             <!-- Price field -->
             <EditText
                 android:id="@+id/edit_book_price"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/hint_book_price"
-                android:inputType="numberDecimal"
-                style="@style/EditorFieldStyle" />
+                android:autofillHints="@string/hint_book_price"
+                android:inputType="numberDecimal" />
 
-            <!-- Quantity field -->
-            <EditText
-                android:id="@+id/edit_book_quantity"
-                android:hint="@string/hint_book_quantity"
-                android:inputType="number"
-                style="@style/EditorFieldStyle" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--Reduces quantity by 1, but not below 0. -->
+                <Button
+                    android:id="@+id/reduce_quantity"
+                    android:layout_width="@dimen/button_width_height"
+                    android:layout_height="@dimen/button_width_height"
+                    android:text="@string/negative_sign"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <!-- Quantity field -->
+                <EditText
+                    android:id="@+id/edit_book_quantity"
+                    style="@style/EditorFieldStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/hint_book_quantity"
+                    android:gravity="center"
+                    android:hint="@string/hint_book_quantity"
+                    android:inputType="number" />
+
+                <!--Increases quantity by 1 -->
+                <Button
+                    android:id="@+id/increase_quantity"
+                    android:layout_width="@dimen/button_width_height"
+                    android:layout_height="@dimen/button_width_height"
+                    android:text="@string/positive_sign"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -58,30 +99,35 @@
 
         <!-- Label -->
         <TextView
-            android:text="@string/category_supplier_info"
-            style="@style/CategoryStyle" />
+            style="@style/CategoryStyle"
+            android:text="@string/category_supplier_info" />
 
         <!-- Input fields -->
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingLeft="4dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingStart="@dimen/view_padding"
+            android:paddingLeft="@dimen/view_padding"
+            android:paddingEnd="@dimen/view_padding"
+            android:paddingRight="@dimen/view_padding">
 
             <!-- Title field -->
             <EditText
                 android:id="@+id/edit_book_supplier_name"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/hint_supplier_name"
-                android:inputType="textCapWords"
-                style="@style/EditorFieldStyle" />
+                android:autofillHints="@string/hint_supplier_name"
+                android:inputType="textCapWords" />
 
             <!-- Title field -->
             <EditText
                 android:id="@+id/edit_book_supplier_phone"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/hint_supplier_phone"
-                android:inputType="text"
-                style="@style/EditorFieldStyle" />
+                android:autofillHints="@string/hint_supplier_phone"
+                android:inputType="phone" />
 
         </LinearLayout>
     </LinearLayout>

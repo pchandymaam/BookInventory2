@@ -5,4 +5,11 @@
 
     <!-- Common margin value used throughout the app -->
     <dimen name="activity_margin">16dp</dimen>
+
+    <!-- 6dp margin used to give space around text views and buttons -->
+    <dimen name="view_padding">6dp</dimen>
+
+    <!-- Button width and height -->
+    <dimen name="button_width_height">48dp</dimen>
+    <dimen name="view_margin">6dp</dimen>
 </resources>

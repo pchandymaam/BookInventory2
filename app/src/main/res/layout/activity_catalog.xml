@@ -6,12 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".CatalogActivity">
 
-    <TextView
-        android:id="@+id/text_view_pet"
+    <ListView
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:focusable="false"
-        android:padding="@dimen/activity_margin"/>
+        android:padding="@dimen/activity_margin"
+        tools:text="Book Inventory View" />
+
+    <!-- Empty view for the list -->
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/empty_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/view_padding"
+            android:paddingLeft="@dimen/view_padding"
+            android:paddingTop="@dimen/view_padding"
+            android:paddingEnd="@dimen/view_padding"
+            android:paddingRight="@dimen/view_padding"
+            android:text="@string/empty_view_title_text"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/empty_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/view_padding"
+            android:paddingLeft="@dimen/view_padding"
+            android:paddingTop="@dimen/view_padding"
+            android:paddingEnd="@dimen/view_padding"
+            android:paddingRight="@dimen/view_padding"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#A2AAB0" />
+
+        <TextView
+            android:id="@+id/empty_quantity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/view_padding"
+            android:paddingLeft="@dimen/view_padding"
+            android:paddingTop="@dimen/view_padding"
+            android:paddingEnd="@dimen/view_padding"
+            android:paddingRight="@dimen/view_padding"
+            android:text="@string/empty_view_subtitle_text"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#A2AAB0" />
+
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -19,6 +65,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="@dimen/view_padding"
+        android:paddingEnd="@dimen/view_padding"
+        android:paddingRight="@dimen/view_padding"
         android:focusable="false"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_add_book"/>
